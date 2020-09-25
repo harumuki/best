@@ -1,0 +1,34 @@
+---
+layout: none
+---
+{% assign font_v = site.data.fontinfo[0].version %}
+/*
+Font families defined by this CSS:
+
+- "InterDisplay"                  static "traditional" fonts for older web browsers
+- "InterDisplay var"              single-axis variable fonts for all modern browsers
+- "InterDisplay var experimental" multi-axis variable fonts for modern web browsers
+
+Use like this in your CSS:
+
+  h1,h2,h3,h4,h5,h6 { font-family: 'InterDisplay', sans-serif; }
+  @supports (font-variation-settings: normal) {
+    h1,h2,h3,h4,h5,h6 { font-family: 'InterDisplay var', sans-serif; }
+  }
+
+------------------------- static ------------------------- */
+{% include InterDisplay-static.css %}
+
+/* ----------------------- variable ----------------------- */
+{% include InterDisplay-italic.var.css %}
+{% include InterDisplay-roman.var.css %}
+
+/* ----------- experimental multi-axis variable -----------
+
+Slant axis is not yet widely supported (as of February 2019) and thus this
+multi-axis single-file variable font is opt-in rather than the default.
+When using this, you will likely need to set font-variation-settings explicitly, e.g:
+  * { font-variation-settings: "slnt" 0deg }
+  .italic { font-variation-settings: "slnt" 10deg }
+*/
+{% include InterDisplay.var.css %}
