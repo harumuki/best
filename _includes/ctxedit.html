@@ -2,10 +2,10 @@
 
 if site.safe == false %}{%
 assign url_root = "/" %}{% else %}{%
-assign url_root = "/inter/" %}{% endif %}{%
+assign url_root = "/" %}{% endif %}{%
 
 for file in site.static_files %}{%
-  assign _path = file.path | remove_first: "/inter" %}{%
+  assign _path = file.path | remove_first: "/" %}{%
   if _path == "/res/ctxedit.js" %}{%
     assign ctxedit_js_v = file.modified_time | date: "%Y%m%d%H%M%S" %}{%
   elsif _path == "/res/ctxedit.css" %}{%
