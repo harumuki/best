@@ -6,7 +6,7 @@ layout: default
 assign release_version = site.data.fontinfo[0].version %}{%
 
 capture download_url
-  %}https://github.com/rsms/inter/releases/download/v{{ release_version }}/Inter-{{ release_version }}.zip{%
+  %}https://github.com/rsms/releases/download/v{{ release_version }}/Inter-{{ release_version }}.zip{%
 endcapture %}{%
 
 for file in site.static_files %}{%
@@ -93,7 +93,7 @@ endfor
         the font files. If you're making a web thing, you can use the following CSS or
         get it from <a href="https://fonts.google.com/specimen/Inter">Google Fonts</a>.
       </p>
-      <pre>@import url('https://rsms.me/inter/inter.css');
+      <pre>@import url('https://rsms.me/inter.css');
 html { font-family: 'Inter', sans-serif; }
 @supports (font-variation-settings: normal) {
   html { font-family: 'Inter var', sans-serif; }
@@ -499,7 +499,7 @@ html { font-family: 'Inter', sans-serif; }
       </a></h4>
       <tt>rsms.me/inter</tt> is distributed globally over CloudFlare's CDN,
       backed by GitHub's servers, making usage of
-      <q>https://rsms.me/inter/inter.css</q> and associated font
+      <q>https://rsms.me/inter.css</q> and associated font
       files very reliable and fast throughout the world.
     </c>
 
@@ -513,7 +513,7 @@ html { font-family: 'Inter', sans-serif; }
       Font making requires a fair bit of technical work and
       depending on what you'd like to do, some things might be more fun
       depending on your technical skills.
-      The <a href="https://github.com/rsms/inter/blob/master/CONTRIBUTING.md">"Contributing" document</a> is a great place to start. The document outlines where
+      The <a href="https://github.com/rsms/blob/master/CONTRIBUTING.md">"Contributing" document</a> is a great place to start. The document outlines where
       you can have the biggest impact, how things are setup and how to get
       started.
     </c>

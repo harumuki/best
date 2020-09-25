@@ -6,12 +6,12 @@ capture title %}{% if page.title %}{{ page.title }} — Inter{% else %}Inter fon
 
 if site.safe == false %}{%
 assign url_root = "/" %}{% else %}{%
-assign url_root = "/inter/" %}{% endif %}{%
+assign url_root = "/" %}{% endif %}{%
 
 assign release_version = site.data.fontinfo[0].version %}{%
 
 capture download_url
-  %}https://github.com/rsms/inter/releases/download/v{{ release_version }}/Inter-{{ release_version }}.zip{%
+  %}https://github.com/rsms/releases/download/v{{ release_version }}/Inter-{{ release_version }}.zip{%
 endcapture %}{%
 
 for file in site.static_files %}{%
@@ -59,8 +59,8 @@ endfor
       <meta property="og:image" content="{{ page.og_image_url }}">
       <meta name="twitter:image" content="{{ page.og_image_url }}">
     {% else %}
-      <meta property="og:image" content="https://rsms.me/inter/res/share.png">
-      <meta name="twitter:image" content="https://rsms.me/inter/res/share.png">
+      <meta property="og:image" content="https://rsms.me/res/share.png">
+      <meta name="twitter:image" content="https://rsms.me/res/share.png">
     {% endif %}
     <meta property="og:image:alt" content="Inter font family sample image">
     <meta property="fb:app_id" content="38027689216">
@@ -87,7 +87,7 @@ endfor
         <li class="nav-glyphs"><a href="{{url_root}}glyphs/" {% if page.url contains "/glyphs/" %}class="active"{% endif %}>Glyphs</a></li>
         <li class="nav-dynmetrics"><a href="{{url_root}}dynmetrics/" {% if page.url contains "/dynmetrics/" %}class="active"{% endif %}>Metrics</a></li>
         <li class="nav-lab"><a href="{{url_root}}lab/" {% if page.url contains "/lab/" %}class="active"{% endif %}>Lab</a></li>
-        <!-- <li class="nav-source"><a href="https://github.com/rsms/inter/">Source</a></li> -->
+        <!-- <li class="nav-source"><a href="https://github.com/rsms/">Source</a></li> -->
         <li class="nav-download"><a href="{{ download_url }}">Download &darr;</a></li>
       </ul>
     </div>
